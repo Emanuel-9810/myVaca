@@ -18,16 +18,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.w3c.dom.Text;
-
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseUser user;
     private DatabaseReference reference;
 
     private String userID;
 
-    private Button logout;
+    private Button logout, tripplanner, destination, profile, trending;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +33,14 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         logout = (Button) findViewById(R.id.signOut);
+        tripplanner = (Button) findViewById(R.id.tripPlanner);
+        tripplanner.setOnClickListener(this);
+        destination = (Button) findViewById(R.id.destinationBtn);
+        destination.setOnClickListener(this);
+//        profile = (Button) findViewById(R.id.profileBtn);
+//        profile.setOnClickListener(this);
+        trending = (Button) findViewById(R.id.trendingBtn);
+        trending.setOnClickListener(this);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,5 +73,20 @@ public class ProfileActivity extends AppCompatActivity {
                 Toast.makeText(ProfileActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.tripPlanner:
+                startActivity(new Intent(this, TripPlanner.class));
+                break;
+            case R.id.trendingBtn:
+                startActivity(new Intent(this, TrendingLocations.class));
+                break;
+            case R.id.destinationBtn:
+                startActivity(new Intent(this, DestinationList.class));
+                break;
+        }
     }
 }

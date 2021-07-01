@@ -7,13 +7,69 @@
     android:background="@drawable/gradient"
     tools:context=".ProfileActivity">
 
+    <ImageView
+        android:id="@+id/homeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/islandpic"
+        android:layout_above="@+id/tripPlanner"
+        />
+
     <TextView
         android:id="@+id/emailAddressTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email: "
         android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
         android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/tripPlanner"
+        android:layout_width="fill_parent"
+        android:backgroundTint="#7439e3"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Trip Planner (Calendar)"
+        />
+
+    <Button
+        android:id="@+id/destinationBtn"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tripPlanner"
+        android:layout_width="fill_parent"
+        android:backgroundTint="#7439e3"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="My destinations"
+        />
+
+    <Button
+        android:id="@+id/profileBtn"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#7439e3"
+        android:layout_below="@id/destinationBtn"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="My Profile"
+        />
+
+    <Button
+        android:id="@+id/trendingBtn"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#7439e3"
+        android:layout_below="@id/profileBtn"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Trending locations"
+        />
 
     <Button
         android:id="@+id/signOut"

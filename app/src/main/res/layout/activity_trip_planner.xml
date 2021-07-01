@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Change this to a Linear Layout after if needed-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".TripPlanner"
+    android:orientation="vertical">
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/calendarView"
+        android:layout_above="@id/homeBtn"
+        android:backgroundTint="@color/mainBackground"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- things to scroll -->
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test1"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test2"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test3"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test4"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test5"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test6"
+                android:textSize="25sp"
+                />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test7"
+                android:textSize="25sp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/homeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="Home"
+        android:backgroundTint="@color/mainBackground"
+        />
+
+
+
+</RelativeLayout>
+
+<!--    &lt;!&ndash; title text &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtTitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="37dp"-->
+<!--        android:text="Questionnaire"-->
+<!--        android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+<!--    &lt;!&ndash; subtitle text &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtSubTitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/txtTitle"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="Where should I go?"-->
+<!--        android:textAppearance="?android:attr/textAppearanceMedium" />-->
+
+<!--    &lt;!&ndash; question 1 text &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtQ1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_below="@+id/txtSubTitle"-->
+<!--        android:layout_marginTop="38dp"-->
+<!--        android:text="Which season is preferred?"-->
+<!--        android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+<!--    &lt;!&ndash; radio group to allow for only one radio button selection &ndash;&gt;-->
+<!--    <RadioGroup-->
+<!--        android:id="@+id/radioAnswers1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/txtQ1" >-->
+
+<!--        &lt;!&ndash; 1st answer radio button&ndash;&gt;-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioA1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Summer"-->
+<!--            android:tag="1" />-->
+
+<!--        &lt;!&ndash; 2nd answer radio button&ndash;&gt;-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioA2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Winter"-->
+<!--            android:tag="2" />-->
+
+<!--        &lt;!&ndash; 3rd answer radio button&ndash;&gt;-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioA3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Fall"-->
+<!--            android:tag="3" />-->
+
+<!--        &lt;!&ndash; 4th answer radio button&ndash;&gt;-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioA4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Spring"-->
+<!--            android:tag="4" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtQ2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_below="@+id/txtQ1"-->
+<!--            android:layout_marginTop="38dp"-->
+<!--            android:text="What is your budget?"-->
+<!--            android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioB1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Summer"-->
+<!--            android:tag="1" />-->
+
+<!--        &lt;!&ndash; 2nd answer radio button&ndash;&gt;-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioB2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Winter"-->
+<!--            android:tag="2" />-->
+
+<!--        &lt;!&ndash; 3rd answer radio button&ndash;&gt;-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioB3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Fall"-->
+<!--            android:tag="3" />-->
+
+<!--        &lt;!&ndash; 4th answer radio button&ndash;&gt;-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioB4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Spring"-->
+<!--            android:tag="4" />-->
+
+<!--    </RadioGroup>-->
+
+
+<!--        &lt;!&ndash; 1st answer radio button&ndash;&gt;-->
+
+
+<!--    &lt;!&ndash; next button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/btnNext"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_toRightOf="@+id/txtTitle"-->
+<!--        android:text="Next" />-->
+
+<!--    </RelativeLayout>-->
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textScreen"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Where should I visit?"-->
+<!--        android:textColor="#FFF"-->
+<!--        android:textSize="30sp"-->
+<!--        android:fontFamily="casual"-->
+<!--        />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="290dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_below="@+id/textScreen"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textQuestion"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:background="@drawable/quesbg"-->
+<!--            android:fontFamily="casual"-->
+<!--            android:text="Which do you prefer?"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="30sp" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editText"-->
+<!--        android:padding="10dp"-->
+<!--        android:clickable="false"-->
+<!--        android:focusable="false"-->
+<!--        android:textSize="32sp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="#000"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textTitle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Ammo"-->
+<!--        />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginLeft="24dp"-->
+<!--        android:layout_marginRight="24dp"-->
+<!--        />-->
+
+<!--</ScrollView>-->
