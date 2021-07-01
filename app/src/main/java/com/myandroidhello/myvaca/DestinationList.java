@@ -98,6 +98,7 @@ public class DestinationList extends AppCompatActivity implements View.OnClickLi
         {
             // add string to the adapter, not the listview
             adapter.add(input);
+            Toast.makeText(this, "Location added", Toast.LENGTH_SHORT).show();
             // no need to call adapter.notifyDataSetChanged(); as it is done by the adapter.add() method
         }else{
             Toast.makeText(this, "Entry is empty, type in a location to add to list", Toast.LENGTH_SHORT).show();
