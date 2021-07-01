@@ -92,7 +92,7 @@ public class DestinationList extends AppCompatActivity implements View.OnClickLi
     }
     public void onClick(View v)
     {
-        locationReference.push().setValue(et.toString().trim()); //Firebase addition here
+        locationReference.push().setValue(/*et.toString().trim()*/ "Location"); //Firebase addition here
         String input = et.getText().toString().toUpperCase();
         if(input.length() > 0)
         {
